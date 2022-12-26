@@ -21,7 +21,6 @@ import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-
 public class ViewerActivity extends AppCompatActivity {
 
     public static final String EXTRA_OS = "extra_os_version";

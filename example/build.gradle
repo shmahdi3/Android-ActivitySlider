@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion targetSdk
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.r0adkll.slidr.example"
-        minSdkVersion minSdk
-        targetSdkVersion targetSdk
+        minSdk 21
+        targetSdk 33
         versionCode 1
         versionName VERSION_NAME
     }
@@ -23,17 +23,18 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
+    buildToolsVersion '33.0.0'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':library')
 
-    implementation supportDependencies.appCompat
-    implementation supportDependencies.recycler
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation supportDependencies.cardView
     implementation supportDependencies.kitCore
 
